@@ -4,8 +4,6 @@ const styles = StyleSheet.create({
   drawerRoute: {
     paddingVertical: 15,
     paddingHorizontal: 15,
-    borderTopWidth: 0.5,
-    borderColor: '#ccc',
     flexDirection: 'row',
     alignItems: 'center',
   },
