@@ -25,24 +25,35 @@ const SideMenu = props => {
   };
 
   return (
-    <View style={commonStyles.flex}>
+    <View style={styles.container}>
       <SafeAreaView style={commonStyles.flex}>
-        <ScrollView showsVerticalScrollIndicator={true}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          style={styles.itemContainer}>
           <TouchableOpacity
-            style={styles.drawerRoute}
+            style={styles.drawerItem}
             onPress={() => navigateToScreen('Home')}>
-            <AntDesign name="home" size={25} />
+            <AntDesign name="home" size={25} color="white" />
             <Text style={styles.drawerRouteText}>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.drawerRoute}
-            onPress={() => {
-              signOut();
-            }}>
-            <AntDesign name="logout" size={25} />
-            <Text style={styles.drawerRouteText}>Logout</Text>
-          </TouchableOpacity>
         </ScrollView>
+        <View style={styles.footerContainer}>
+          <View style={styles.bottomSection}>
+            <View style={styles.logoutContainer}>
+              <TouchableOpacity
+                style={[styles.logoutSection]}
+                onPress={() => {
+                  signOut();
+                }}>
+                <AntDesign name="logout" size={25} color="white" />
+                <Text style={styles.drawerRouteText}>Log Out</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.versionInfo}>
+              <Text style={styles.versionText}>Build : v1.1</Text>
+            </View>
+          </View>
+        </View>
       </SafeAreaView>
     </View>
   );

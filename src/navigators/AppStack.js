@@ -31,13 +31,11 @@ export default function DrawerStack() {
       screenOptions={{
         drawerStyle: {
           backgroundColor: 'white',
-          width: 260,
+          width: '80%',
         },
         headerStyle: {backgroundColor: '#1A1924', borderBottomColor: 'white'},
         headerTitleStyle: {color: 'white'},
         headerTintColor: 'white',
-        // drawerLabelStyle: {color: 'white'},
-        // drawerActiveBackgroundColor: 'red'
       }}
       drawerPosition={'left'}
       drawerType={'slide'}
