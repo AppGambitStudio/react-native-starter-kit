@@ -4,7 +4,12 @@ const commonStyles = StyleSheet.create({
   flex: {
     flex: 1,
   },
-  transparent: {backgroundColor: 'transparent'},
+  containerPadding: {
+    padding: 10,
+  },
+  transparent: {
+    backgroundColor: 'transparent',
+  },
 });
 
 export default commonStyles;

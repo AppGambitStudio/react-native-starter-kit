@@ -4,7 +4,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import styles from './style';
 
 const HeaderLeft = props => {
-  console.log('HeaderLeft', props);
   const navigation = props.navigation;
 
   return (

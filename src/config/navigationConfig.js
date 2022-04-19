@@ -6,12 +6,12 @@ export const navigationScreenOptions = {
     backgroundColor: 'white',
     width: '80%',
   },
-  headerStyle: {backgroundColor: '#1A1924', borderBottomColor: 'white'},
-  headerTitleStyle: {color: 'white'},
-  headerTintColor: 'white',
+  drawerType: 'slide',
+  headerShown: false,
 };
 
 export const screenHeaderOptions = props => ({
   headerLeft: hederProps => <HeaderLeft {...props} {...hederProps} />,
   headerTitleAlign: 'center',
+  animation: 'slide_from_right',
 });

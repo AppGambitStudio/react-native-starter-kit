@@ -5,11 +5,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1A1924',
   },
-  drawerItem: {
+  drawerItem: (active = false) => ({
     padding: 15,
     flexDirection: 'row',
     alignItems: 'center',
-  },
+    borderRadius: 3,
+    backgroundColor: active ? 'black' : 'transparent',
+  }),
   drawerRouteText: {
     letterSpacing: 0.8,
     marginLeft: 10,
