@@ -2,8 +2,8 @@ import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
-  navigationScreenOptions,
-  screenHeaderOptions,
+  drawerScreenOptions,
+  appStackHeaderOptions,
 } from '../config/navigationConfig';
 
 import Home from '../components/Home/Home';
@@ -14,7 +14,7 @@ const AppStack = createNativeStackNavigator();
 const Screens = props => {
   return (
     <AppStack.Navigator
-      initialRouteName={'Login'}
+      initialRouteName={'Home'}
       screenOptions={{
         headerStyle: {backgroundColor: '#1A1924', borderBottomColor: 'white'},
         headerTitleStyle: {color: 'white'},
@@ -22,12 +22,12 @@ const Screens = props => {
       <AppStack.Screen
         name="Home"
         component={Home}
-        options={screenHeaderOptions}
+        options={appStackHeaderOptions}
       />
       <AppStack.Screen
         name="About"
         component={About}
-        options={screenHeaderOptions}
+        options={appStackHeaderOptions}
       />
     </AppStack.Navigator>
   );
@@ -40,9 +40,10 @@ export default function DrawerStack() {
       drawerContent={props => (
         <SideMenu navigation={props.navigation} {...props} />
       )}
-      screenOptions={navigationScreenOptions}
+      defaultStatus={'closed'}
+      screenOptions={drawerScreenOptions}
       drawerPosition={'left'}
-      initialRouteName={'Home'}>
+      initialRouteName={'Screens'}>
       <Drawer.Screen name="Screens" component={Screens} />
     </Drawer.Navigator>
   );

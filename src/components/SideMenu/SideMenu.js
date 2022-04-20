@@ -10,7 +10,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import {setLogin} from '../../redux/reducers/Auth/authReducer';
 import {useDispatch} from 'react-redux';
-import {useNavigationState} from '@react-navigation/native';
+import {useNavigationState, CommonActions} from '@react-navigation/native';
 
 const SideMenu = props => {
   const navigation = props.navigation;
@@ -18,7 +18,9 @@ const SideMenu = props => {
   useNavigationState(state => {
     index =
       state && state.routes && state.routes[0].state
-        ? state.routes[0].state.index
+        ? state.routes[0].state.routes[0].state
+          ? state.routes[0].state.routes[0].state.index
+          : 0
         : 0;
   });
 
@@ -30,6 +32,13 @@ const SideMenu = props => {
   };
 
   const signOut = () => {
+    navigation.closeDrawer();
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [{name: 'Home'}],
+      }),
+    );
     dispatch(setLogin(false));
   };
 

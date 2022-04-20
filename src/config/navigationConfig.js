@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderLeft from '../components/HeaderLeft/HeaderLeft';
 
-export const navigationScreenOptions = {
+export const drawerScreenOptions = {
   drawerStyle: {
     backgroundColor: 'white',
     width: '80%',
@@ -10,7 +10,7 @@ export const navigationScreenOptions = {
   headerShown: false,
 };
 
-export const screenHeaderOptions = props => ({
+export const appStackHeaderOptions = props => ({
   headerLeft: hederProps => <HeaderLeft {...props} {...hederProps} />,
   headerTitleAlign: 'center',
   animation: 'slide_from_right',
