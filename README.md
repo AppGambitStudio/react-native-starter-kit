@@ -18,7 +18,7 @@ This project is created to kick-start your new react native app development. It 
 ****
 
 ## 🧰 Tools
-This project using following common tools:
+This project is using following common tools:
 
 * **Redux Architecture**
     - [Redux](https://redux.js.org/)
