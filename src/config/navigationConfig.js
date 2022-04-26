@@ -1,12 +1,15 @@
 import React from 'react';
 import HeaderLeft from '../components/HeaderLeft/HeaderLeft';
+import {Dimensions} from 'react-native';
+const {width} = Dimensions.get('window');
 
 export const drawerScreenOptions = {
   drawerStyle: {
-    backgroundColor: 'white',
-    width: '80%',
+    backgroundColor: 'transparent',
+    width: width,
   },
-  drawerType: 'slide',
+  overlayColor: 'transparent',
+  drawerType: 'front',
   headerShown: false,
 };
 
