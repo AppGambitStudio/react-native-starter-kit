@@ -113,24 +113,24 @@ const SideMenu = props => {
   };
 
   return (
-    <AnimatedMaskedView
-      style={maskedStyle}
-      maskElement={
-        <Svg
-          width={width}
-          height={height}
-          viewBox={`0 0 ${width} ${height}`}
-          style={commonStyles.transparent}>
-          <AnimatedPolygon
-            ref={polygonRef}
-            points={`0,0 ${fromCoords.x}, ${fromCoords.y} ${width}, ${height} 0, ${height}`}
-            // points={`0,0 ${toCoords.x}, ${toCoords.y} ${width}, ${height} 0, ${height}`}
-            fill="blue"
-          />
-        </Svg>
-      }>
-      <Animated.View style={animatedViewStyle}>
-        <SafeAreaView style={commonStyles.flex}>
+    <SafeAreaView style={commonStyles.flex}>
+      <AnimatedMaskedView
+        style={maskedStyle}
+        maskElement={
+          <Svg
+            width={width}
+            height={height}
+            viewBox={`0 0 ${width} ${height}`}
+            style={commonStyles.transparent}>
+            <AnimatedPolygon
+              ref={polygonRef}
+              points={`0,0 ${fromCoords.x}, ${fromCoords.y} ${width}, ${height} 0, ${height}`}
+              // points={`0,0 ${toCoords.x}, ${toCoords.y} ${width}, ${height} 0, ${height}`}
+              fill="blue"
+            />
+          </Svg>
+        }>
+        <Animated.View style={animatedViewStyle}>
           <ScrollView
             showsVerticalScrollIndicator={false}
             style={styles.itemContainer}>
@@ -168,9 +168,9 @@ const SideMenu = props => {
               </View>
             </View>
           </View>
-        </SafeAreaView>
-      </Animated.View>
-    </AnimatedMaskedView>
+        </Animated.View>
+      </AnimatedMaskedView>
+    </SafeAreaView>
   );
 };
 
