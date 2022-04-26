@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
   drawerScreenOptions,
   appStackHeaderOptions,
+  appStackScreenOptions,
 } from '../config/navigationConfig';
 
 import Home from '../components/Home/Home';
@@ -15,10 +16,7 @@ const Screens = props => {
   return (
     <AppStack.Navigator
       initialRouteName={'Home'}
-      screenOptions={{
-        headerStyle: {backgroundColor: '#1A1924', borderBottomColor: 'white'},
-        headerTitleStyle: {color: 'white'},
-      }}>
+      screenOptions={appStackScreenOptions}>
       <AppStack.Screen
         name="Home"
         component={Home}

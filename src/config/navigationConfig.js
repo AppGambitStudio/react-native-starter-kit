@@ -18,3 +18,8 @@ export const appStackHeaderOptions = props => ({
   headerTitleAlign: 'center',
   animation: 'slide_from_right',
 });
+
+export const appStackScreenOptions = {
+  headerStyle: {backgroundColor: '#1A1924', borderBottomColor: 'white'},
+  headerTitleStyle: {color: 'white'},
+};
